@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navtitleback_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:background="@color/nav_title_bkgd" >
+    	
+    	<LinearLayout android:id="@+id/navtitleback_title_block"
+			android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:layout_centerVertical="true"
+		    android:paddingLeft="10dp"
+		    android:paddingRight="10dp"
+		    android:background="@drawable/nav_menu_item_bkgd" >
+
+		    <ImageView android:id="@+id/navtitleback_title_arrorw"
+	    		android:layout_width="wrap_content"
+		    	android:layout_height="fill_parent"
+		    	android:src="@drawable/nav_back" />	
+		    		     		    
+		    <ImageView android:id="@+id/navtitleback_title_logo"
+	    		android:layout_width="wrap_content"
+		    	android:layout_height="fill_parent"
+		    	android:src="@drawable/logo_dashboard_titlebar"
+		    	android:layout_marginLeft="10dp" />		        		    	
+	    	
+	    	<TextView android:id="@+id/navtitleback_title_text"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"	    	
+	    		android:layout_marginLeft="5dp"	    		    		    
+	    		android:text="title"
+	    		android:layout_gravity="center"
+	    		android:textAppearance="@style/navmenu_text_title"
+	    		android:maxLines="1" />	    	
+    	</LinearLayout>
+    	
+    	<ImageView android:id="@+id/navtitleback_refresh_image"
+    		android:layout_width="48dp"
+    		android:layout_height="48dp"
+    		android:layout_centerVertical="true"
+    		android:layout_alignParentRight="true"
+			android:src="@drawable/refresh_icon"
+    		android:visibility="invisible" />
+    
+    	<ImageView android:id="@+id/navtitleback_help_button"
+    		android:layout_width="48dp"
+    		android:layout_height="48dp"
+    		android:layout_centerVertical="true"
+    		android:layout_alignParentRight="true"
+    		android:layout_marginRight="48dp"
+			android:background="@drawable/help_icon"
+    		android:visibility="invisible" />
+</RelativeLayout>

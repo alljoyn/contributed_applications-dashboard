@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/eula_layout_outer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:layout_margin="10dp" >
+
+    <RelativeLayout 
+	    android:id="@+id/navtitleback_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="48dp"
+	    android:background="@color/nav_title_bkgd_trans"	    
+	    android:layout_alignParentTop="true" >
+	    
+	    <TextView
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"	    	    	    		
+	   		android:gravity="center"
+	    	android:text="@string/eula_title"
+	    	android:textAppearance="@style/eula_text_header"
+	    	android:maxLines="1" />
+   	</RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/splash_background"
+        android:layout_below="@+id/navtitleback_layout"       
+        android:layout_above="@+id/eula_button_layout" >
+
+        <LinearLayout
+            android:id="@+id/eula_layout_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/eula_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="14dp"
+                android:scrollbars="vertical"
+                android:text="SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKSSOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS SOME TEXT THAT I WANT TO SEE THE COLOR TO SEE IF IT WORKS"
+                android:textAppearance="@style/eula_text_body" />
+        </LinearLayout>
+        
+    </ScrollView>
+
+	<LinearLayout
+        android:id="@+id/eula_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp" 
+        android:layout_margin="10dp"             
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/eula_decline"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+         	android:textSize="16sp"
+         	android:focusable="false"
+            android:textColor="@color/btn_pop"
+            android:text="@string/decline"
+        	android:background="@drawable/btn_pop"
+            android:layout_marginRight="1dp" />
+	
+        <Button          
+            android:id="@+id/eula_accept"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+          	android:focusable="true"
+          	android:focusableInTouchMode="true"
+            android:background="@drawable/btn_pop"
+            android:textSize="16sp"
+            android:textColor="@color/btn_pop"
+            android:text="@string/accept"
+            android:textAppearance="@style/eula_text_button" />
+    </LinearLayout>
+</RelativeLayout>

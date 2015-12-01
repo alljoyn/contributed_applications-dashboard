@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nearby_devices_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<!-- The PullToRefreshGridView replaces a standard GridView widget. -->
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_grid"
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:paddingTop="5dp"
+    	android:paddingBottom="5dp"
+    	android:columnWidth="157dp"
+    	android:numColumns="auto_fit"
+    	android:verticalSpacing="7dp"
+    	android:horizontalSpacing="7dp"
+    	android:stretchMode="columnWidth"
+    	android:gravity="center"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderBackground="#33000000"
+        ptr:ptrHeaderTextAppearance="@style/my_devices_refresh_text"
+        ptr:ptrSubHeaderTextAppearance="@style/my_devices_refresh_text"
+        ptr:ptrMode="pullFromStart"
+        ptr:ptrDrawable="@drawable/refresh_down_icon" />
+    
+    <ImageView android:id="@+id/nearby_devices_image_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    	android:paddingTop="10dp"
+    	android:paddingLeft="20dp"
+        android:src="@drawable/my_devices_no_devices"
+    	android:visibility="visible" />
+</RelativeLayout>

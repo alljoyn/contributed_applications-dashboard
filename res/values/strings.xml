@@ -1,0 +1,418 @@
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<resources>
+    <string name="app_name">Dashboard</string>
+    <string name="app_description">Bringing the things around you to life.</string>
+    <string name="legal_text_1">Please accept our</string>
+    <string name="legal_text_2"><u>Terms of Service</u>.</string>
+    <string name="ellipsis">&#8230;</string>
+
+    <!-- DeviceListActivity -->
+    <string name="select_device">select a device to configure</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="title_alljoyn_devices">AllJoyn Services</string>
+
+    <!-- Buttons -->
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="save">Save</string>
+    <string name="next">Next</string>
+    <string name="enter">Enter</string>
+    <string name="finish">Finish</string>
+    <string name="confirm">Confirm</string>
+    <string name="enable">Enable</string>
+    <string name="cancel">Cancel</string>
+    <string name="cont">Continue</string>
+    <string name="okay">Okay</string>
+    <string name="exit">Exit</string>
+    <string name="off">OFF</string>
+    <string name="on">ON</string>
+    <string name="try_again">Try Again</string>
+    <string name="remove_from_my_devices">Remove Device From My Devices</string>
+    <string name="configure_device">Configure Device</string>
+    <string name="login">Login</string>
+    <string name="unlock">Unlock</string>
+    <string name="scan">Scan To Unlock</string>
+    <string name="restart">Restart</string>
+    <string name="reset">Reset</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="delete">Delete</string>
+    <string name="launch">Launch</string>
+    <string name="quit">Quit</string>
+    <string name="wait">Wait</string>
+
+    <!-- Navigation Menu -->
+    <string name="navmenu_button">Nav</string>
+    <string name="navmenu_feed">Notifications</string>
+    <string name="navmenu_feed_num">Notifications %s</string>
+    <string name="navmenu_my_devices">My Devices</string>
+    <string name="navmenu_nearby_devices">Browse Nearby</string>
+    <string name="navmenu_add_devices">Add Device</string>
+    <string name="navmenu_settings">Settings</string>
+    <string name="navmenu_help">Help</string>
+    <string name="navmenu_header_setup">Setup</string>
+    <string name="navmenu_header_help">Help &amp; Settings</string>
+
+    <!-- Main Devices -->
+    <string name="maindevices_nearby_devices">Nearby Devices</string>
+
+    <!-- Alert Dialogs -->
+    <string name="alert_title_confirm_legal_decline">Are you sure?</string>
+    <string name="alert_message_confirm_legal_decline">You may not use this application until you\'ve accepted the terms of service.</string>
+    <string name="alert_title_confirm_device_passphrase">Enter Device Security Passphrase</string>
+    <string name="alert_message_confirm_device_passphrase">Please confirm this device\'s security passphrase in order to edit its settings.</string>
+    <string name="alert_title_incorrect_device_passphrase">Sorry</string>
+    <string name="alert_message_incorrect_device_passphrase">Incorrect device security passphrase, please try again.</string>
+    <string name="alert_title_not_matching_device_passphrase">Sorry</string>
+    <string name="alert_message_not_matching_device_passphrase">Device security passphrase did not match, please try again.</string>
+    <string name="alert_message_connecting_to_network">Verifying Device Network Password and connecting to network&#8230;</string>
+    <string name="alert_message_removing_device">Removing device from network&#8230;</string>
+    <string name="alert_message_connected_waiting_for_announcement">Device connected. Waiting for device to be ready&#8230;</string>
+    <string name="alert_message_verifying_device_passphrase">Verifying Device Security Passphrase&#8230;</string>
+    <string name="alert_title_confirm_existing_device_passphrase">Error</string>
+    <string name="alert_message_confirm_existing_device_passphrase">The device security passphrase you entered is incorrect. Please try again.</string>
+    <string name="alert_message_confirm_new_device_passphrase">The device security passphrases you entered don\'t match. Please try again.</string>
+    <string name="alert_title_connect_wifi_network_list">Available Networks</string>
+    <string name="alert_title_connect_wifi_pass_type">Select Password Format</string>
+    <string name="alert_title_manage_device_confirm_remove">Remove from My Devices</string>
+    <string name="alert_message_manage_device_confirm_remove">This device will no longer appear in My Devices, but will stay configured to your network and appear in the Browse Nearby screen.</string>
+    <string name="alert_title_no_wifi">No WiFi Connection</string>
+    <string name="alert_message_no_wifi">Please connect to a WiFi network to interact with Alljoyn devices.</string>
+    <string name="alert_message_no_wifi_feed">You may be missing notifications because you are not connected to a WiFi network.</string>
+    <string name="alert_title_no_devices_found">No Alljoyn devices found</string>
+    <string name="alert_message_no_devices_found">Please check your WiFi connection and make sure the devices are turned ON.</string>
+    <string name="alert_title_unable_to_connect">Unable to Connect</string>
+    <string name="alert_message_unable_to_connect">Unable to join %s. Please check the WiFi name and password.</string>
+    <string name="alert_title_camera_error">Oops</string>
+    <string name="alert_message_camera_error">Looks like something is wrong with the camera, so we cannot launch the QR code viewfinder.</string>
+    <string name="alert_title_confirm_restart_device">Restart Device</string>
+    <string name="alert_message_confirm_restart_device">Your device will be restarted. Your changes will be saved but we recommend you use this only if you are having connection problems.</string>
+    <string name="alert_title_confirm_reset_device">Are you sure?</string>
+    <string name="alert_message_confirm_reset_device">Your device will be reset to its original configuration.</string>
+    <string name="alert_title_qr_code_error">Error</string>
+    <string name="alert_message_qr_code_error">QR code not formatted correctly.</string>
+    <string name="alert_title_incorrect_device_network_password">Sorry</string>
+    <string name="alert_message_incorrect_device_network_password">Incorrect device network password. Please try again.</string>
+    <string name="alert_title_confirm_cancel_device_setup">Cancel Device Setup</string>
+    <string name="alert_message_confirm_cancel_device_setup">Are you sure you want to cancel the \"%s\" device setup?</string>
+    <string name="alert_title_connection_failed">Connection Failed</string>
+    <string name="alert_message_connection_to_device_failed">Unable to connect to the %s. Please reboot the device and try again.</string>
+    <string name="alert_message_wifi_connection_failed">We encountered a problem connecting to \"%s\". Please check your Wi-Fi network and try again.</string>
+    <string name="alert_title_device_not_found">Device Not Found</string>
+    <string name="alert_message_device_not_found">Unable to communicate with \"%s\". Please reboot the device and try again.</string>
+    <string name="alert_message_searching_for_device">Trying to communicate with \"%s\".</string>
+    <string name="alert_title_factory_reset_failed">Factory Reset Failed</string>
+    <string name="alert_message_factory_reset_failed">Unable to reset \"%s\". Please try again.</string>
+     <string name="alert_message_restart_failed">Unable to restart \"%s\". Please try again.</string>
+    <string name="alert_title_name_change_failed">Name Change Failed</string>
+    <string name="alert_message_name_change_failed">Unable to change the \"%s\" device name. Please try again.</string>
+    <string name="alert_title_wi_fi_is_disabled">Wi-Fi is disabled</string>
+    <string name="alert_message_wi_fi_is_disabled">%s requires Wi-Fi. Please enable Wi-Fi.</string>
+    <string name="alert_title_verification">Waiting For Device</string>
+    <string name="alert_message_verification">Verification for %s is taking longer than expected</string>
+    <string name="alert_title_configuration_error">Configuration Error</string>
+    <string name="alert_message_configuration_error">Configure %s device failed. Try again.</string>
+    <!-- Toasts -->
+    <string name="toast_onboard_failed">Configuration failed, please try again.</string>
+    <string name="toast_onboard_device_failed">Configuration failed for %s, please try again.</string>
+    <string name="toast_onboard_empty_ssid">Please select a WiFi Network.</string>
+    <string name="toast_onboard_empty_name">Please enter a Network Name.</string>
+    <string name="toast_onboard_empty_wifi_password">Please enter a WiFi Network Password.</string>
+    <string name="toast_onboard_empty_oem_password">Please enter the Device Network Password.</string>
+    <string name="toast_onboard_connect_to_network_failed">Failed to connect to network. Please verify the Device Network Password you entered is correct.</string>
+    <string name="toast_added_device">%s added to My Devices.</string>
+    <string name="toast_device_passphrase_set">Device Security Passphrase Set</string>
+    <string name="toast_device_passphrase_changed">Device Security Passphrase Changed</string>
+    <string name="toast_device_passphrase_deleted">Device Security Passphrase Deleted</string>
+    <string name="toast_device_removed">%s has been removed from My Devices.</string>
+    <string name="toast_wifi_not_enabled">WiFi not enabled.</string>
+    <string name="toast_network_scan_error">No networks found.</string>
+    <string name="toast_connected_to">Connected to %s</string>
+    <string name="toast_device_not_found">Device not found.</string>
+    <string name="toast_value_changed">Changed.</string>
+    <string name="onboarding_failed_try_again">Onboarding failed. Please try again.</string>
+
+    <!-- Device Status Text -->
+    <string name="status_available">Available</string>
+    <string name="status_error">Error</string>
+    <string name="status_unavailable">Unavailable</string>
+    <string name="status_unknown">Unknown</string>
+    <string name="status_disconnected">Turned Off</string>
+    <string name="status_factoryReseting">Factory Reseting &#8230;</string>
+    <string name="status_configuring">Configuring &#8230;</string>
+    <string name="status_unconfigured">Unconfigured</string>
+    <string name="status_configuration_failed">Configuration Failed</string>
+
+    <!-- BaseActivity -->
+    <string name="wifi_settings">WiFi Settings</string>
+
+    <!-- MyDevicesActivity -->
+    <string name="my_devices_empty_1">You haven\'t added any devices!</string>
+    <string name="my_devices_empty_2">There are no Alljoyn devices nearby. To setup a new device, power it on and you will see it appear here.</string>
+
+    <!-- NearbyActivity -->
+    <string name="nearby_devices_header_1">Configured Devices in WiFi Network</string>
+    <string name="nearby_devices_header_2">Unconfigured Devices in WiFi Network</string>
+    <string name="nearby_devices_empty">None found</string>
+
+    <!-- FeedActivity -->
+    <string name="feed_empty_1">No notifications to display</string>
+    <string name="feed_empty_2">You will receive notifications from the devices in Nearby Devices on this screen.</string>
+    <string name="feed_device_removed_from_app">Device has been removed from app</string>
+
+    <!-- AddDevicesActivity -->
+    <string name="add_devices_header">Select a device to add to My Devices:</string>
+
+    <!-- HelpActivity -->
+    <string name="help_title">Help</string>
+    <string name="help_my_devices">Think of this as your \"favorites\" page. All of the AllJoyn devices you\'ve added (either from the Browse Nearby or the Add Device button in the upper right hand corner of this screen) will appear on this screen.</string>
+    <string name="help_add_device">This page shows you all the AllJoyn devices this app has detected on the same WiFi network. If a device that you select hasn\'t been configured yet, AllJoyn On will guide you through the configuration process. If a device has already been configured, selecting a device will add the device to the My Devices screen.</string>
+    <string name="help_browse_nearby">This page shows you all the AllJoyn devices on the same WiFi network that you may use.</string>
+
+    <!-- EULAActivity -->
+    <string name="tos_title">Terms of Service</string>
+    <string name="eula_title">Terms of Service</string>
+    <string name="eula_my_devices">Think of this as your \"favorites\" page. All of the AllJoyn devices you\'ve added (either from the Browse Nearby or the Add Device button in the upper right hand corner of this screen) will appear on this screen.</string>
+    <string name="eula_add_device">This page shows you all the AllJoyn devices this app has detected on the same WiFi network. If a device that you select hasn\'t been configured yet, AllJoyn On will guide you through the configuration process. If a device has already been configured, selecting a device will add the device to the My Devices screen.</string>
+    <string name="eula_browse_nearby">This page shows you all the AllJoyn devices on the same WiFi network that you may use.</string>
+
+    <!-- DeviceDetailsActivity -->
+    <string name="device_details_title">Device Control</string>
+    <string name="device_details_button_add">Add to My Devices</string>
+    <string name="device_details_disconnected_text_1">Device Turned Off</string>
+    <string name="device_details_disconnected_text_2">This device is nearby and in range but is currently turned off.</string>
+    <string name="device_details_disconnected_text_3">Check the device and make sure it\'s got power and is turned on.</string>
+    <string name="device_details_error_text_1">Device Error</string>
+    <string name="device_details_error_text_2">This device is nearby and in range but there is an error.</string>
+    <string name="device_details_error_text_3">Check the device manufacturer manual for troubleshooting tips.</string>
+    <string name="device_details_out_of_network_text_1">Device Out Of Network</string>
+    <string name="device_details_out_of_network_text_2">This device is configured to a different WiFi network from the one you\'re currently connected to.</string>
+    <string name="device_details_out_of_network_text_3">Switch your WiFi connection to %s to interact with this device.</string>
+    <string name="device_details_button_out_of_network">Switch Your WiFi Connection</string>
+    <string name="device_details_unconfigured_text_1">Device Unconfigured</string>
+    <string name="device_details_unconfigured_text_2">This device is not configured to a WiFi network.</string>
+    <string name="device_details_configuring_text_1">This device is attempting to configure to %s. This may take up to 60 seconds.</string>
+    <string name="device_details_configuring_text_2">This screen will update automatically when configuration is complete.</string>
+    <string name="device_details_button_configuring">Cancel Configuration</string>
+    <string name="device_details_configuration_failed_text_1">Configuration Failed</string>
+    <string name="device_details_configuration_failed_text_2">This device failed to configure to %s.</string>
+    <string name="device_details_status_not_connected">Not connected to network</string>
+    <string name="device_details_desc_not_connected">You need to configure this device to a network before you can use it.</string>
+    <string name="device_details_desc_no_controls">There are no available\ncontrols for your device.</string>
+    <string name="device_details_desc_unavailable">The device is unavailable.</string>
+
+    <!-- ManageDeviceActivity -->
+    <string name="manage_device_title">Manage Device</string>
+    <string name="manage_device_edit">Edit</string>
+    <string name="manage_device_mute_notif">Ignore device notifications</string>
+    <string name="manage_device_passphrase_set">Change device password</string>
+    <string name="manage_device_passphrase_edit">Change or remove device password</string>
+    <string name="manage_device_notification_language">Language</string>
+    <string name="manage_device_connect_available">Configured to:</string>
+    <string name="manage_device_connect_configuring">Configuring to:</string>
+    <string name="manage_device_connect_not_configured">Unconfigured to network</string>
+    <string name="manage_device_connect">Configured to %s</string>
+    <string name="manage_device_more_info">More device info</string>
+    <string name="manage_device_restart">Restart device</string>
+    <string name="manage_device_reset">Reset to factory settings</string>
+    <string name="manage_device_unpin_from_nearby">Unpin from Nearby Devices</string>
+    <string name="manage_device_pin_to_nearby">Pin to Nearby Devices</string>
+    <string name="manage_device_help">Help</string>
+    <string name="manage_device_saved">Saved</string>
+    <string name="manage_device_select_language">Select Language</string>
+    <string name="manage_device_removing_device">Removing Device</string>
+    <string name="manage_device_removed_device">%s\n Removed From App</string>
+    <string name="manage_device_restert_loading">Restarting &#8230;</string>
+    <string name="manage_device_factory_reset_loading">Resetting &#8230;</string>
+    
+    <!-- Edit Device Name/Passcode Activities -->
+    <string name="edit_device_name_title">Edit Device Name</string>
+    <string name="edit_device_passphrase_title">Set Device Security Passphrase</string>
+    <string name="edit_device_passphrase_text_1">You\'ve set a device security passphrase but you can change it or delete it. Remember, you\'ll need to enter the device security passphrase to control or edit device settings.</string>
+    <string name="edit_device_passphrase_text_2">Enter existing device security passphrase to make changes:</string>
+    <string name="edit_device_passphrase_forgot">Forgot device security passphrase?</string>
+    <string name="edit_device_passphrase_hint">Enter existing device security passphrase</string>
+    <string name="set_device_passphrase_title">Change device password</string>
+    <string name="set_device_passphrase_text">You can add extra security to your device by setting a security passphrase. You will need to enter this when you want to control a device and/or edit any of it\'s settings.</string>
+    <string name="set_device_passphrase_hint">Change device password</string>
+    <string name="alter_device_passphrase_title_set">Set Device Security Passphrase</string>
+    <string name="alter_device_passphrase_title_edit">Edit Device Security Passphrase</string>
+    <string name="alter_device_passphrase_set_text">You can add extra security to your device by setting a security passphrase. Anyone who wants to control this device and/or edit any of its settings will need to enter the security passphrase.</string>
+    <string name="alter_device_passphrase_set_button">Set New Device Security Passphrase</string>
+    <string name="alter_device_passphrase_edit_text">You\'ve set a device security passphrase but you can change or delete it.</string>
+    <string name="alter_device_passphrase_change_button">Change Device Security Passphrase</string>
+    <string name="alter_device_passphrase_delete_button">Delete Device Security Passphrase</string>
+    <string name="enter_device_password_title">This will change the password for the \"%s\" device.</string>
+    <string name="checkbox_show_passwords">Show passwords</string>
+    <string name="enter_device_current_password">Current Password</string>
+    <string name="enter_device_passphrase_set_text_1">New Password</string>
+    <string name="enter_device_passphrase_set_text_2">Confirm Password</string>
+    <string name="enter_device_passphrase_hint_current_password">Enter Current Password</string>
+    <string name="enter_device_passphrase_hint_set_1">Enter New Password</string>
+    <string name="enter_device_passphrase_hint_set_2">Confirm New Password</string>
+    <string name="enter_device_passphrase_title_new">New Device Security Passphrase</string>
+    <string name="enter_device_passphrase_title_existing">Current Device Security Passphrase</string>
+    <string name="enter_device_passphrase_existing_text_1">Enter existing device security passphrase to make changes:</string>
+    <string name="enter_device_passphrase_delete_text_1">Are you sure you want to delete the device security passphrase? Enter existing device security passphrase to make changes:</string>
+    <string name="enter_device_passphrase_hint_existing">Enter existing device security passphrase</string>
+
+    <!-- EnterConnectCodeActivity -->
+    <string name="enter_connect_code_title">Unlock Device</string>
+    <string name="enter_connect_code_instruction">Please enter device network password provided by the manufacturer to unlock this device.</string>
+    <string name="enter_connect_code_oem_password_header">Enter Device Network Password</string>
+    <string name="enter_connect_code_oem_password_hint">Device Network Password</string>
+    <string name="enter_connect_code_text_or">OR</string>
+    <string name="enter_connect_code_scanqr_header">Scan QR code</string>
+
+    <!-- ScanQRCodeActivity -->
+    <string name="scan_qr_code_title">Scan QR Code</string>
+    <string name="scan_qr_code_instruction">Point your camera at the QR Code.</string>
+    <string name="scan_qr_code_tip">Tip: Avoid glare and shadows</string>
+
+    <!-- EnterWifiActivity -->
+    <string name="connect_wifi_title">Connect to WiFi Network</string>
+    <string name="connect_wifi_instruction">Connect to the WiFi network you want to configure this device to.</string>
+    <string name="connect_wifi_login_header">WiFi Login</string>
+    <string name="connect_wifi_network_list">Select WiFi Network</string>
+    <string name="connect_wifi_pass_type">Password Format</string>
+    <string name="connect_wifi_network_hint">Network Name</string>
+    <string name="connect_wifi_password_hint">WiFi Network Password</string>
+    <string name="connect_wifi_checkbox_text">Remember Network</string>
+    <string name="checkbox_show_password">Show password</string>
+    <!-- OnboardFinishedActivity -->
+    <string name="onboard_finished_title">Device Successfully Added</string>
+    <string name="onboard_finished_header">Success!</string>
+    <string name="onboard_finished_text">Well, that was easy&#8230;\n\nLooks like \"%1$s\" has already been configured to your WiFi network, %2$s.\n\nYou can start using %3$s with your device right away!</string>
+    <string name="onboard_finished_checkbox_text">Don\'t Show Again</string>
+
+    <!-- ManageDeviceConnectionActivity -->
+    <string name="manage_device_connection_title">Manage Configuration</string>
+    <string name="manage_device_connection_header">Currently configured to:</string>
+    <string name="manage_device_connection_button_remove">Remove Device from Network</string>
+    <string name="manage_device_connection_not_connected">Not configured to a network</string>
+    <string name="manage_device_connection_button_connect">Configure Device</string>
+
+    <!-- DeviceInfoActivity -->
+    <string name="device_info_title">More Device Info</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_category_device_title">Device</string>
+    <string name="settings_setup_home_wifi_title">Home Wi-Fi Setup</string>
+    <string name="settings_setup_home_wifi_key">home_wifi_setup_key</string>
+    <string name="settings_notifications_title">Device Notifications</string>
+    <string name="settings_notifications_description">Show in Android notifications tray when device notification arrives</string>
+    <string name="settings_notifications_key">settings_notifications_key</string>
+    <string name="settings_ringtone_title">Notification Ringtone</string>
+    <string name="settings_ringtone_key">settings_ringtone_key</string>
+    <string name="settings_vibrate_title">Vibrate</string>
+    <string name="settings_vibrate_summary">Vibrate when notification arrives</string>
+    <string name="settings_vibrate_key">settings_vibrate_key</string>
+    <string name="settings_category_about_title">About</string>
+    <string name="settings_changelog_title">Change Log</string>
+    <string name="settings_changelog_summary">Version</string>
+    <string name="settings_changelog_key">settings_changelog_key</string>
+    <string name="settings_changelog_text">What\'s new!\nVersion %s\n\n  • Compatible with any AllJoyn-enabled device\n\n  • Configure any AllJoyn-enabled device to a wifi network\n\n  • Receive notifications from any AllJoyn-enabled device using Notifications Service\n\n  • Control any AllJoyn-enabled device using Control Panel Service\n\n  • Manage AllJoyn-enabled device details</string>
+    <string name="settings_help_title">Help</string>
+    <string name="settings_help_key">settings_help_key</string>
+    <string name="settings_legal_title">Legal Notices</string>
+    <string name="settings_legal_key">settings_legal_key</string>
+    <string name="settings_license_title">License Agreement</string>
+    <string name="settings_third_party_licenses_title">Third Party Licenses</string>
+    <string name="settings_third_party_licenses_key">settings_third_party_licenses_key</string>
+
+    <!-- General app keys -->
+    <string name="device_id">device_id</string>
+    <string name="device_ssid">device_ssid</string>
+
+    <!-- AC Fan -->
+    <string name="acfan_current">Current</string>
+    <string name="acfan_set_temp">Set Temp</string>
+    <string name="acfan_fan">Fan</string>
+    <string name="acfan_temp">Temp</string>
+    <string name="acfan_high">High</string>
+    <string name="acfan_med">Med</string>
+    <string name="acfan_low">Low</string>
+    <string name="acfan_off">Off</string>
+    <string name="acfan_on">On</string>
+    <string name="acfan_oscillate">Oscillate</string>
+
+    <!-- RemoveDeviceFromNetworkActivity -->
+    <string name="remove_from_network_page_title">Remove from network</string>
+    <string name="remove_device_from_network">Remove device from network</string>
+    <string name="remove_device_from_network_explanation">This will completely remove your device from the network. You will have to configure your device to the network again.\n\nPress the button below to confirm.</string>
+    <string name="remove_device_from_network_button_text">Remove device from network</string>
+    <string name="alert_title_wifi_authentication_failed">WiFi authentication failed</string>
+    <string name="alert_msg_wifi_authentication_failed">Please go to WiFi settings and try to reconnect.</string>
+
+    <!-- Onbarding Click SDK -->
+    <string name="save_home_wifi">Setup Home Wi-Fi Network</string>
+    <string name="introduction_text">To expedite setting up devices in the future, please enter your home network\'s Wi-Fi information now.</string>
+    <string name="check_entered_values">Verifying entered information</string>
+    <string name="select_wifi">Nearby Networks</string>
+    <string name="enter_wifi_password">Network Password</string>
+    <string name="verify">Verify</string>
+    <string name="bad_info">Please verify information entered.</string>
+    <string name="save_wifi_password">Remember Network</string>
+    <string name="intro_device_ap">This devices requires a PIN to interact with it.  Enter the PIN from the box or press QR Code button if the device has this.</string>
+    <string name="enter_pin">Enter Pin</string>
+    <string name="qrcode_button">Scan QR Code</string>
+    <string name="device_pin_hint">From device or user manual</string>
+    <string name="popup_enter_wifi">Select the network to provision into the device</string>
+    <string name="progress_text">The device currently being onboarded</string>
+    <string name="advanced_options">Advanced</string>
+    <string name="skip">Skip</string>
+    <string name="name_of_network_hint">Enter Network SSID</string>
+    <string name="wifi_advanced_toggle_on">ON</string>
+    <string name="wifi_advanced_toggle_off">OFF</string>
+    <string name="confirm_onboarding">Would you like to setup \"%s\"?</string>
+    <string name="onboard_yes">Onboard device</string>
+    <string name="onboard_no">No thank you</string>
+    <string name="onboard_next">    Next    </string>
+    <string name="onboard_done">Done :)</string>
+    <string name="device_name_label">Device Name:</string>
+    <string name="wifi_initializing">Initializing&#8230;</string>
+    <string name="wifi_authentication_title">Authentication Failed</string>
+    <string name="wifi_authentication_message">Please re-enter your network password for \'%s\' and try again </string>
+    <string name="wifi_connection_title">Connection Failed</string>
+    <string name="wifi_connection_message">We encountered a problem connecting to \'%s\'.\nPlease check your Wi-Fi network and retry.</string>
+    <string name="application_settings">Application Settings</string>
+    <string name="wait_while_loading">Please wait while loading</string>
+    <string name="alert_msg_device_no_longer_available">%s is no longer available.</string>
+    <string name="notification_with_actio_progress_Test">Communicating with device&#8230;</string>
+    <string name="hidden_network">Hidden network</string>
+    <string name="notification_dismissed_dialog_title">Notification dismissed</string>
+    <string name="notification_dismissed_dialog_msg">A Notification has been dismissed. Re-load the dialog to continue.</string>
+
+    <!-- setup device step 3 activity -->
+    <string name="aborting">Aborting&#8230;</string>
+    <string name="alert_msg_cant_abort">Setup device cannot be canceled at this stage, process will continue.</string>
+    <string name="setup_device3_instruction_base">The \"%s\" device is being configured.</string>
+    <string name="setup_device3_progress_connecting_to_device">Connecting to device&#8230;</string>
+    <string name="setup_device3_progress_looking_for_device_on_network">Looking for device on network....</string>
+    <string name="setup_device3_progress_configuring_device">configuring device&#8230;</string>
+    <string name="setup_device3_progress_connecting_to_target_wifi">Connecting to \"%s\"&#8230;</string>
+    <string name="setup_device3_progress_verifying_onboarded">Looking for \"%1$s\" device on \"%2$s\"</string>
+    <string name="setup_device3_progress_verified_onboarded">onboarding completed.</string>
+    <string name="setup_device3_instruction_rename">The \"%s\" has been configured!\nPlease give your device a name and press finish</string>
+    <string name="setup_device3_instruction_onboarding_completed">The \"%s\" has been configured!\nPlease press finish</string>
+    <string name="setup_device3_ErrorConfiguringOnboardee">Error onboarding \"%s\"&#8230;</string>
+
+</resources>

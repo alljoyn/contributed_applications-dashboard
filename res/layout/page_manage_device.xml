@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/manage_device_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/manage_device_layout_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         android:background="@drawable/device_background"
+         android:orientation="vertical" >
+
+        <include
+            android:id="@+id/nav_title"
+            layout="@layout/navigation_title_back" />
+
+        <RelativeLayout
+            android:id="@+id/manage_device_header_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp" >
+
+            <ImageView
+                android:id="@+id/manage_device_header_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:minHeight="40dp"
+                android:src="@drawable/my_devices_icon_reg" />
+
+            <TextView
+                android:id="@+id/manage_device_text_saved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:gravity="left|bottom"
+                android:text="@string/manage_device_saved"
+                android:textAppearance="@style/manage_device_text_saved"
+                android:visibility="invisible" 
+                android:singleLine ="true"                	
+               	android:ellipsize="end"
+                />
+
+            <ImageView
+                android:id="@+id/manage_device_button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/cancel_x_icon"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/manage_device_button_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_toLeftOf="@id/manage_device_button_cancel"
+                android:src="@drawable/confirm_check_icon"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/manage_device_edit_underline"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/manage_device_button_cancel"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="0dp"
+                android:layout_toLeftOf="@id/manage_device_button_confirm"
+                android:layout_toRightOf="@id/manage_device_header_icon"
+                android:background="@drawable/edit_text_marker"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/manage_device_header_icon"
+                android:layout_toLeftOf="@id/manage_device_button_confirm"
+                android:layout_above="@id/manage_device_edit_underline" >
+                
+            	<EditText
+                	android:id="@+id/manage_device_edit_name"
+                	android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                	android:background="#00000000"
+                	android:gravity="left|bottom"
+               		android:drawableRight="@drawable/manage_devices_edit_icon"
+               		android:drawablePadding="10dp"
+                	android:paddingBottom="2dp"
+                	android:paddingLeft="12dp"
+                	android:paddingRight="5dp"
+                	android:paddingTop="15dp"
+                	android:text="Deviceds"
+               		android:textColor="#a3a3a3"
+               		android:singleLine ="true"
+               		android:ellipsize="end"
+               		android:inputType="text"
+               		android:scrollHorizontally="true" />
+            	</LinearLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:src="@color/manage_device_seperator" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="53dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/manage_device_toggle_layout"
+                        android:layout_width="76dp"
+                        android:layout_height="26dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/btn_toggle_track"
+                        android:textOff="@string/off"
+                        android:textOn="@string/on" >
+
+                        <TextView
+                            android:id="@+id/manage_device_toggle_off"
+                            android:layout_width="38dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/btn_toggle_off"
+                            android:gravity="center"
+                            android:text="@string/no"
+                            android:textAppearance="@style/manage_device_toggle_item" />
+
+                        <TextView
+                            android:id="@+id/manage_device_toggle_on"
+                            android:layout_width="38dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/btn_toggle_on"
+                            android:gravity="center"
+                            android:text="@string/yes"
+                            android:textAppearance="@style/manage_device_toggle_item"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/manage_device_item_mute_notif"
+                        android:layout_width="fill_parent"
+                        android:layout_height="53dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/nav_menu_item_bkgd"
+                        android:drawableLeft="@drawable/manage_devices_mute_icon"
+                        android:drawablePadding="10dp"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:paddingLeft="7dp"
+                        android:text="@string/manage_device_mute_notif"
+                        android:textAppearance="@style/manage_device_text_item" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:src="@color/manage_device_seperator" />
+
+                <TextView
+                    android:id="@+id/manage_device_item_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="53dp"
+                    android:background="@drawable/nav_menu_item_bkgd"
+                    android:drawableLeft="@drawable/manage_devices_password_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="@string/manage_device_passphrase_set"
+                    android:textAppearance="@style/manage_device_text_item" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:src="@color/manage_device_seperator" />
+
+                <TextView
+                    android:id="@+id/manage_device_item_more_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="53dp"
+                    android:background="@drawable/nav_menu_item_bkgd"
+                    android:drawableLeft="@drawable/manage_devices_more_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="@string/manage_device_more_info"
+                    android:textAppearance="@style/manage_device_text_item" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:src="@color/manage_device_seperator" />
+
+                <TextView
+                    android:id="@+id/manage_device_item_restart"
+                    android:layout_width="fill_parent"
+                    android:layout_height="53dp"
+                    android:background="@drawable/nav_menu_item_bkgd"
+                    android:drawableLeft="@drawable/manage_devices_restart_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="@string/manage_device_restart"
+                    android:textAppearance="@style/manage_device_text_item" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:src="@color/manage_device_seperator" />
+
+                <TextView
+                    android:id="@+id/manage_device_item_reset"
+                    android:layout_width="fill_parent"
+                    android:layout_height="53dp"
+                    android:background="@drawable/nav_menu_item_bkgd"
+                    android:drawableLeft="@drawable/manage_devices_reset_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="@string/manage_device_reset"
+                    android:textAppearance="@style/manage_device_text_item" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:src="@color/manage_device_seperator" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="53dp" >
+
+                    <CheckBox
+                        android:id="@+id/manage_device_pin_check_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox"
+                        android:layout_centerVertical="true"
+                        android:textColor="#777777" />
+
+                    <TextView
+                        android:id="@+id/manage_device_pin_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="53dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/nav_menu_item_bkgd"
+                        android:drawableLeft="@drawable/manage_devices_pin_icon"
+                        android:drawablePadding="10dp"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:paddingLeft="7dp"
+                        android:text="@string/manage_device_pin_to_nearby"
+                        android:textAppearance="@style/manage_device_text_item" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:src="@color/manage_device_seperator" />
+
+                <TextView
+                    android:id="@+id/manage_device_item_notification_language"
+                    android:layout_width="fill_parent"
+                    android:layout_height="53dp"
+                    android:background="@drawable/nav_menu_item_bkgd"
+                    android:drawableLeft="@drawable/manage_devices_language_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="@string/manage_device_notification_language"
+                    android:textAppearance="@style/manage_device_text_item" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:src="@color/manage_device_seperator" />
+
+                <TextView
+                    android:id="@+id/manage_device_item_help"
+                    android:layout_width="fill_parent"
+                    android:layout_height="53dp"
+                    android:background="@drawable/nav_menu_item_bkgd"
+                    android:drawableLeft="@drawable/manage_devices_help_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="@string/manage_device_help"
+                    android:textAppearance="@style/manage_device_text_item" />
+
+                <ImageView
+                    android:id="@+id/manage_device_item_help_seperator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:src="@color/manage_device_seperator" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

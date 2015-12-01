@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/enter_device_passcode_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/device_background" >
+
+    <include
+        android:id="@+id/nav_title"
+        layout="@layout/navigation_title_back" />
+
+	<RelativeLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:paddingLeft="20dp" 
+		android:paddingRight="20dp"
+	    android:layout_marginBottom="20dp"
+        android:layout_below="@id/nav_title" > 
+        
+    <TextView
+        android:id="@+id/enter_device_passcode_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_marginTop="26dp" 
+		android:layout_marginBottom="26dp" 
+        android:text="@string/enter_device_password_title"
+		android:textColor="#aeaeae"
+		android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/enter_device_password_generic_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter_device_passcode_title"
+        android:gravity="right" >
+
+        <TextView
+            android:id="@+id/enter_device_passcode_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/enter_device_current_password"
+			android:textColor="#aeaeae"
+			android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/enter_device_passcode_show_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/checkbox"
+            android:checked="false"
+            android:text="@string/checkbox_show_passwords"
+			android:textColor="#aeaeae"
+			android:textSize="13sp" >
+        </CheckBox>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/enter_device_passcode_entry_current"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter_device_password_generic_layout"
+        android:layout_marginTop="6dp"
+        android:drawableLeft="@drawable/input_type_password_icon"
+        android:drawablePadding="10dp"
+        android:hint="@string/enter_device_passphrase_hint_current_password"
+        android:textAppearance="@style/onboard_text_hint" />
+
+    <TextView
+        android:id="@+id/enter_device_passcode_text_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter_device_passcode_entry_current"
+        android:layout_marginTop="26dp"
+        android:text="@string/enter_device_passphrase_set_text_1"
+        android:textColor="#aeaeae"
+		android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/enter_device_passcode_entry_new"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter_device_passcode_text_1"
+        android:layout_marginTop="6dp"
+        android:drawableLeft="@drawable/input_type_password_icon"
+        android:drawablePadding="10dp"
+        android:hint="@string/enter_device_passphrase_hint_set_1"
+        android:textAppearance="@style/onboard_text_hint" />
+
+    <TextView
+        android:id="@+id/enter_device_passcode_text_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter_device_passcode_entry_new"
+        android:layout_marginTop="26dp"
+        android:text="@string/enter_device_passphrase_set_text_2"
+        android:textColor="#aeaeae"
+		android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/enter_device_passcode_entry_confiem"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter_device_passcode_text_2"
+        android:layout_marginTop="6dp"
+        android:drawableLeft="@drawable/input_type_password_icon"
+        android:drawablePadding="10dp"
+        android:hint="@string/enter_device_passphrase_hint_set_2"
+        android:textAppearance="@style/onboard_text_hint" />
+
+    <LinearLayout
+        android:id="@+id/enter_device_passcode_button_layout"
+		android:layout_width="match_parent"
+        android:layout_height="48dp"
+		android:layout_marginTop="26dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/enter_device_passcode_calcel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+         	android:textSize="16sp"
+         	android:focusable="true"
+            android:textColor="@color/btn_pop"
+        	android:background="@drawable/btn_pop"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/enter_device_passcode_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+         	android:textSize="16sp"
+         	android:focusable="true"
+            android:textColor="@color/btn_pop"
+        	android:background="@drawable/btn_pop"
+            android:text="@string/confirm" />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/enter_device_error_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/enter_device_passcode_button_layout"
+        android:layout_marginTop="6dp"
+        android:gravity="center_horizontal"
+        android:text="error"
+        android:textColor="#aeaeae"
+		android:textSize="13sp" 
+        android:visibility="gone"/>
+</RelativeLayout>
+</RelativeLayout>

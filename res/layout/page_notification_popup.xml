@@ -1,0 +1,223 @@
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#66515151"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/navtitleback_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/nav_title_bkgd" >
+
+        <TextView
+            android:id="@+id/nav_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:maxLines="1"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/navtitleback_title_block"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"    
+            android:background="@drawable/nav_menu_item_bkgd"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:id="@+id/navtitleback_title_arrorw"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@drawable/nav_back" />
+
+            <ImageView
+                android:id="@+id/navtitleback_title_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/logo_dashboard_titlebar" />
+
+            <TextView
+                android:id="@+id/navtitleback_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="title"
+                android:textAppearance="@style/navmenu_text_title" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/device_details_header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:id="@+id/device_details_header_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="12dp"
+            android:minHeight="40dp"
+            android:src="@drawable/my_devices_icon_reg" />
+
+        <TextView
+            android:id="@+id/device_details_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:layout_toLeftOf="@id/notification_icon_device_layout"
+            android:layout_toRightOf="@id/device_details_header_icon"
+            android:ellipsize="end"
+            android:gravity="left|top"
+            android:maxLines="1"
+            android:text="Device Name"
+            android:textAppearance="@style/device_details_text_name" />
+
+        <ImageView
+            android:id="@+id/device_details_status_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/device_details_device_name"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/device_details_header_icon"
+            android:gravity="center"
+            android:src="@drawable/my_devices_status_available_icon" />
+
+        <TextView
+            android:id="@+id/device_details_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/device_details_device_name"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@id/notification_icon_device_layout"
+            android:layout_toRightOf="@id/device_details_status_icon"
+            android:gravity="left|bottom"
+            android:maxLines="1"
+            android:text="Device Status"
+            android:textAppearance="@style/device_details_text_status" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:src="@color/manage_device_seperator" />
+
+    <TextView
+        android:id="@+id/notification_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/device_details_text_status" />
+
+    <LinearLayout
+        android:id="@+id/progressbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="@android:style/Widget.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/setup_d_rename_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:maxLines="1"
+            android:text="@string/notification_with_actio_progress_Test"
+            android:textColor="#aeaeae"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/device_details_control_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dismiss_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pop"
+            android:focusable="true"
+            android:text="@string/dismiss"
+            android:textColor="@color/btn_pop"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/launch_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pop"
+            android:focusable="true"
+            android:text="@string/launch"
+            android:textColor="@color/btn_pop"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

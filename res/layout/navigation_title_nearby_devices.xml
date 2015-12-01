@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navtitlemenu_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nav_title_bkgd" >
+    
+  	<RelativeLayout
+  	    android:id="@+id/navtitlemenu_layout_inner"
+  	    android:layout_width="fill_parent"
+  	    android:layout_height="48dp" >
+    
+    	<TextView android:id="@+id/navtitlemenu_text"
+    		android:layout_width="wrap_content"
+    		android:layout_height="fill_parent"
+    		android:layout_alignParentLeft="true"
+    		android:layout_centerVertical="true"
+    		android:layout_marginLeft="10dp"
+    		android:drawablePadding="5dp"
+    		android:drawableLeft="@drawable/logo_dashboard_titlebar"
+    		android:gravity="left|center_vertical"
+    		android:text="@string/maindevices_nearby_devices"
+    		android:textAppearance="@style/navmenu_text_title"
+    		android:maxLines="1"
+    		android:background="@drawable/nav_menu_item_bkgd" />
+
+    	<ImageView android:id="@+id/navtitlemenu_help_button"
+    		android:layout_width="48dp"
+    		android:layout_height="48dp"
+    		android:layout_centerVertical="true"
+			android:background="@drawable/help_icon"
+			android:layout_alignParentRight="true"
+			android:visibility="gone"/>
+    	
+    	<ImageView
+    	    android:id="@+id/navtitlemenu_settings_image"
+    		android:layout_width="41dp"
+    		android:layout_height="48dp"
+    	    android:layout_alignParentTop="true"
+    	    android:layout_centerVertical="true"
+    	    android:layout_alignParentRight="true"
+    	    android:src="@drawable/main_screen_settings_selector" />
+    	
+    	<FrameLayout  
+    	    android:id="@+id/notification_icon_layout"
+    	    android:layout_width="wrap_content"  
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentTop="true"
+    	    android:layout_centerVertical="true"
+    	    android:layout_toLeftOf="@+id/navtitlemenu_settings_image" >   
+    	       	
+	    	<ImageView
+	    	    android:id="@+id/navtitlemenu_notifications_image_nearby"
+    			android:layout_width="41dp"
+    			android:layout_height="48dp"
+	    	    android:src="@drawable/main_screen_notification_selector" /> 
+	
+	    	<TextView
+	    	    android:id="@+id/navtitlemenu_notifications_text"
+	    	    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingBottom="5dp"
+		        android:layout_gravity="center"
+	    	    android:textColor="#0b0b0b" />
+		</FrameLayout>	
+   	</RelativeLayout>
+</RelativeLayout>

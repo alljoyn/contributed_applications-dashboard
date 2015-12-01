@@ -1,0 +1,145 @@
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   	android:background="#66515151"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/setup_d3_title_text"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+		android:background="@color/black"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Setup Device – Step 3 of 3"
+		android:textColor="#ebebeb"
+		android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_marginLeft="20dp"	
+		android:layout_marginRight="20dp"
+		android:layout_marginTop="26dp"
+		android:layout_marginBottom="26dp"
+		android:scrollbarStyle="outsideInset" >
+
+       <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">            
+           	<TextView
+                android:id="@+id/setup_text_instruction"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+		        android:layout_marginBottom="26dp" 
+                android:gravity="center"
+                android:text="The %s device is being configured.Please give your device a name."
+                android:textColor="#aeaeae"
+		        android:textSize="16sp" />
+	         <LinearLayout
+	             android:id="@+id/setup_rename_layout"
+	             android:layout_below="@+id/setup_text_instruction" 
+	             android:layout_width="fill_parent"
+	             android:layout_height="wrap_content"
+	             android:layout_alignParentLeft="true"	            
+				 android:orientation="vertical">
+	             <TextView
+                    android:id="@+id/setup_d_rename_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                
+                    android:layout_marginBottom="6dp"
+                    android:text="Device Name"
+                    android:textColor="#aeaeae"
+			    	android:textSize="13sp" />
+	              <EditText
+                    android:id="@+id/setup_d_rename_name_entry"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"                         
+                    android:drawableLeft="@drawable/input_type_password_icon"
+                    android:drawablePadding="10dp"
+                    android:hint="Enter Device Name"
+                    android:imeOptions="actionDone"
+                    android:inputType="textNoSuggestions"
+                    android:singleLine="true"
+                    android:textAppearance="@style/onboard_text_hint" >
+	                <requestFocus /></EditText>	               
+	           </LinearLayout>
+
+	            <LinearLayout
+	                android:id="@+id/setup_d3_rename_progressbar_layout"
+	                android:layout_below="@+id/setup_rename_layout"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"	               
+			        android:layout_marginTop="20dp" 
+	                android:gravity="center"
+	                android:orientation="horizontal"
+	                android:visibility="gone" >
+	                <ProgressBar
+	                    android:id="@+id/setup_d3_progressbar"
+	                    style="@android:style/Widget.ProgressBar.Small"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content" />	
+	                <TextView
+	                    android:id="@+id/setup_d3_rename_progress_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:layout_marginLeft="10dp"
+	                    android:maxLines="5"
+	                    android:text="Connecting to device ..."
+	                    android:textColor="#aeaeae"
+				       	android:textSize="16sp" />
+	            </LinearLayout>	            
+       	 </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/setup_d_rename_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+		android:layout_marginTop="6dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/setup_d_rename_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+         	android:textSize="16sp"
+         	android:focusable="true"
+            android:textColor="@color/btn_pop"
+        	android:background="@drawable/btn_pop"
+            android:text="@android:string/cancel" />
+
+        <Button
+            android:id="@+id/setup_d_rename_finish"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+         	android:textSize="16sp"
+         	android:focusable="true"
+            android:textColor="@color/btn_pop"
+        	android:background="@drawable/btn_pop"
+            android:text="@string/finish" />
+    </LinearLayout>
+</LinearLayout>

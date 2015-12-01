@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<resources>
+    <color name="holo_light_blue">#33B5E5</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#ff888888</color>
+    <color name="red">#ff0000</color>
+	<color name="darker_gray">#ff333333</color>
+	<color name="dark_gray">#ff666666</color>
+	<color name="light_gray">#ffaaaaaa</color>
+	<color name="lighter_gray">#ffcccccc</color>
+    <color name="semi_transparent_black">#C8000000</color>
+    <color name="nav_title_bkgd">#ff0b0b0b</color>
+    <color name="nav_title_bkgd_trans">#CC0b0b0b</color>
+    <color name="nav_menu_bkgd">#ff151515</color>
+    <color name="nav_menu_item_bkgd_reg">#00000000</color>
+    <color name="nav_menu_item_bkgd_press">#42EAD3</color>
+    <color name="nav_menu_item_text_reg">#ff919191</color>
+    <color name="nav_menu_item_text_active">#ffe4e4e4</color>
+    <color name="nav_menu_item_text_press">#ffe4e4e4</color>
+    <color name="manage_device_seperator">#ff808080</color>
+    <color name="manage_device_text_enabled">#ebebeb</color>
+    <color name="manage_device_text_disabled">#ffaeaeae</color>
+    <color name="manage_device_text_error">#ffff0000</color>
+    <color name="device_list_header">#ffacacac</color>
+</resources>

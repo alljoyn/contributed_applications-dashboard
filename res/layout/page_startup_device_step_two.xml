@@ -1,0 +1,196 @@
+<!--
+Copyright AllSeen Alliance. All rights reserved.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   	android:background="#66515151"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/setup_d2_title_text"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+		android:background="@color/black"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Setup Device – Step 2 of 3"
+		android:textColor="#ebebeb"
+		android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:fillViewport="true"
+		android:paddingLeft="20dp" 
+		android:paddingRight="20dp"
+		android:paddingTop="26dp"
+		android:paddingBottom="26dp"
+		android:scrollbarStyle="outsideInset" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/setup_device_1_text_instruction"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="26dp"
+                android:gravity="center"
+                android:text="You are about to setup aj_mekarer"
+                android:textColor="#aeaeae"
+		        android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/setup_device_1_password_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setup_device_1_text_instruction" >
+
+                <TextView
+                    android:id="@+id/setup_device_1_password_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="6dp"
+                    android:text="Device Setup Password"
+			    	android:textColor="#aeaeae"
+			    	android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/setup_device_1_pasword_entry"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/setup_device_1_password_text_view"
+                    android:drawableLeft="@drawable/input_type_password_icon"
+                    android:drawablePadding="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:hint="@string/enter_connect_code_oem_password_hint"
+                    android:textAppearance="@style/onboard_text_hint" >
+                    <requestFocus android:layout_width="match_parent" />
+                </EditText>
+
+                <CheckBox
+                    android:id="@+id/setup_device_1_show_password_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/setup_device_1_pasword_entry"
+                    android:button="@drawable/checkbox"
+                    android:checked="false"
+                    android:text="@string/checkbox_show_password"
+			        android:textColor="#aeaeae"
+			       	android:textSize="13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setup_device_1_scan_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/setup_device_1_password_layout"
+                android:layout_marginTop="26dp" >
+
+                <TextView
+                    android:id="@+id/setup_device_1_text_or"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="QR Code Scan"
+			        android:textColor="#aeaeae"
+			       	android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/setup_device_1_scanqr_button"
+                    android:layout_width="wrap_content"
+            		android:layout_height="48dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/setup_device_1_text_or"
+                    android:layout_marginTop="6dp"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp"
+                    android:text="Scan"
+         			android:textSize="16sp"
+         			android:focusable="true"
+            		android:textColor="@color/btn_pop"
+        			android:background="@drawable/btn_pop" />
+            </RelativeLayout>
+
+              <LinearLayout
+                  android:id="@+id/setup_d2_progressbar_layout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/setup_device_1_scan_layout"
+                  android:layout_alignParentBottom="true"
+                  android:layout_alignParentLeft="true"
+                  android:gravity="center"
+                  android:orientation="horizontal"
+                  android:visibility="gone" >
+
+                  <ProgressBar
+                      android:id="@+id/setup_d2_progressbar"
+                      style="@android:style/Widget.ProgressBar.Small"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" />
+
+                  <TextView
+                      android:id="@+id/setup_d2_progress_text"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_marginLeft="10dp"
+                      android:maxLines="1"
+                      android:textColor="#aeaeae"
+                      android:textSize="16sp" />
+              </LinearLayout>
+            
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/setup_device_1_help_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/setup_device_1_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+         	android:textSize="16sp"
+         	android:focusable="true"
+            android:textColor="@color/btn_pop"
+        	android:background="@drawable/btn_pop"
+            android:text="@android:string/cancel" />
+
+        <Button
+            android:id="@+id/setup_device_1_next"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+         	android:textSize="16sp"
+         	android:focusable="true"
+            android:textColor="@color/btn_pop"
+        	android:background="@drawable/btn_pop"
+            android:text="@string/next" />
+    </LinearLayout>
+
+</LinearLayout>
